@@ -3,7 +3,7 @@
 /_yardoc/
 /coverage/
 /doc/
-/gemfiles/
+/gemfiles/.bundle/
 /pkg/
 /spec/dummy/log/
 /spec/dummy/openapi/*.yaml
