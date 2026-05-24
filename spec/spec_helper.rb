@@ -5,10 +5,7 @@ require "rails_autodoc"
 require "combustion"
 
 Combustion.path = "spec/dummy"
-Combustion.initialize! :all do
-  sqlite3_config = config.active_record.sqlite3 if config.respond_to?(:active_record)
-  sqlite3_config.represent_boolean_as_integer = true if sqlite3_config.respond_to?(:represent_boolean_as_integer=)
-end
+Combustion.initialize! :all
 
 [Rails.root.join("app/models"), Rails.root.join("app/controllers")].each do |load_path|
   Dir[load_path.join("**", "*.rb")].sort.each { |path| require path }

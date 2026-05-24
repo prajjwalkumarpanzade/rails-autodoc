@@ -6,7 +6,11 @@
 /gemfiles/
 /pkg/
 /spec/dummy/log/
+/spec/dummy/openapi/*.yaml
+!/spec/dummy/openapi/.keep
 /spec/dummy/tmp/
 /spec/examples.txt
 /tmp/
+/vendor/bundle/
+/.DS_Store
 *.gem

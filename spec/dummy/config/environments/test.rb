@@ -9,4 +9,7 @@ Rails.application.configure do
   config.action_controller.perform_caching = false
   config.active_support.deprecation = :stderr
   config.active_record.migration_error = :page_load
+
+  # Rails 5.2 sqlite3 adapter: store booleans as integers (see sqlite3 gem docs).
+  config.active_record.sqlite3 = { represent_boolean_as_integer: true } if Rails::VERSION::MAJOR < 6
 end
