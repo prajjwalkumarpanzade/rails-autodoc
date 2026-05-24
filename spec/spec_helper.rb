@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+require "logger"
 require "rails"
 require "rails_autodoc"
 require "combustion"

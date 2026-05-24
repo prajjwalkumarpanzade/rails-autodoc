@@ -53,11 +53,11 @@ jobs:
         with:
           ruby-version: ${{ matrix.ruby }}
           bundler: ${{ matrix.bundler }}
-      - name: Install root gems
-        run: bundle install
+      - name: Install appraisal
+        run: gem install appraisal --no-document
       - name: Generate appraisal gemfiles
-        run: bundle exec appraisal generate
+        run: appraisal generate
       - name: Install appraisal gemfile
-        run: bundle exec appraisal ${{ matrix.appraisal }} bundle install
+        run: appraisal ${{ matrix.appraisal }} bundle install
       - name: Run appraisal specs
-        run: bundle exec appraisal ${{ matrix.appraisal }} rake spec
+        run: appraisal ${{ matrix.appraisal }} rake spec
