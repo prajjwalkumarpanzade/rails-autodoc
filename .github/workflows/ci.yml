@@ -37,11 +37,10 @@ jobs:
         with:
           ruby-version: "3.2"
           bundler: "2.6.9"
-      - name: Install appraisal
-        run: gem install appraisal --no-document
+          bundler-cache: true
       - name: Generate appraisal gemfiles
-        run: appraisal generate
+        run: bundle exec appraisal generate
       - name: Install appraisal gemfile
-        run: appraisal ${{ matrix.appraisal }} bundle install
+        run: bundle exec appraisal ${{ matrix.appraisal }} bundle install
       - name: Run appraisal specs
-        run: appraisal ${{ matrix.appraisal }} rake spec
+        run: bundle exec appraisal ${{ matrix.appraisal }} rake spec
