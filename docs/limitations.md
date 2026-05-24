@@ -18,7 +18,6 @@
 
 - Baseline without annotations: ~60-70% useful coverage
 - With light DSL overrides: ~90%+ for most REST APIs
-- FastAPI/Pydantic parity: not a goal
 
 ## When to use annotations
 
