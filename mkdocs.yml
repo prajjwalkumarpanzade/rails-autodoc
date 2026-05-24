@@ -1,0 +1,16 @@
+site_name: rails-autodoc
+site_description: Auto-generate OpenAPI documentation from Rails conventions
+theme:
+  name: material
+nav:
+  - Home: index.md
+  - Getting Started: getting-started.md
+  - Configuration: configuration.md
+  - Inference Rules: inference-rules.md
+  - Annotation DSL: annotation-dsl.md
+  - Serializer Support: serializer-support.md
+  - CI Integration: ci-integration.md
+  - Limitations: limitations.md
+  - Migration from rswag: migration-from-rswag.md
+  - Architecture: architecture.md
+  - FAQ: faq.md

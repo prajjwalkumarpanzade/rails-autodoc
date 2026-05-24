@@ -1,0 +1,12 @@
+/.bundle/
+/.yardoc/
+/_yardoc/
+/coverage/
+/doc/
+/gemfiles/
+/pkg/
+/spec/dummy/log/
+/spec/dummy/tmp/
+/spec/examples.txt
+/tmp/
+*.gem

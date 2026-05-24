@@ -1,0 +1,64 @@
+openapi: 3.0.3
+info:
+  title: Dummy API
+  version: 1.0.0
+paths:
+  "/api/v1/users":
+    get:
+      operationId: api_v1_users_index
+      tags:
+        - Users
+        - Api
+        - V1
+      summary: GET /api/v1/users
+      responses:
+        "200":
+          description: Successful response
+    post:
+      operationId: api_v1_users_create
+      tags:
+        - Users
+        - Api
+        - V1
+      summary: POST /api/v1/users
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                user:
+                  type: object
+                  properties:
+                    name:
+                      type: string
+                    email:
+                      type: string
+                    age:
+                      type: integer
+                    address:
+                      type: object
+                      properties:
+                        street:
+                          type: string
+                        city:
+                          type: string
+                      required:
+                        - street
+                        - city
+                    tags:
+                      type: array
+                      items:
+                        type: string
+                  required:
+                    - name
+                    - email
+                    - age
+                    - address
+                    - tags
+              required:
+                - user
+      responses:
+        "201":
+          description: Successful response

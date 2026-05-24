@@ -1,0 +1,81 @@
+AllCops:
+  TargetRubyVersion: 2.7
+  NewCops: enable
+  SuggestExtensions: false
+  Exclude:
+    - "spec/dummy/**/*"
+    - "vendor/**/*"
+
+Style/Documentation:
+  Enabled: false
+
+Style/StringLiterals:
+  EnforcedStyle: double_quotes
+
+Style/OptionalBooleanParameter:
+  Exclude:
+    - "lib/rails_autodoc/dsl/controller_extensions.rb"
+    - "lib/rails_autodoc/registry.rb"
+
+Gemspec/DevelopmentDependencies:
+  Enabled: false
+
+Layout/EndOfLine:
+  Enabled: false
+
+Layout/LineLength:
+  Max: 120
+  Exclude:
+    - "lib/rails_autodoc/tasks/autodoc.rake"
+
+Lint/DuplicateBranch:
+  Exclude:
+    - "lib/**/*"
+
+Naming/PredicateMethod:
+  Exclude:
+    - "lib/rails_autodoc/configuration.rb"
+    - "lib/rails_autodoc/generator.rb"
+
+Metrics/BlockLength:
+  Exclude:
+    - "spec/**/*"
+    - "Appraisals"
+    - "rails-autodoc.gemspec"
+
+Metrics/ClassLength:
+  Exclude:
+    - "lib/rails_autodoc/openapi_spec_builder.rb"
+    - "lib/rails_autodoc/strong_params_parser.rb"
+    - "lib/rails_autodoc/schema_mapper.rb"
+    - "lib/rails_autodoc/response_inferencer.rb"
+
+Metrics/MethodLength:
+  Max: 30
+  Exclude:
+    - "lib/rails_autodoc/openapi_spec_builder.rb"
+
+Metrics/ParameterLists:
+  Exclude:
+    - "lib/rails_autodoc/openapi_spec_builder.rb"
+    - "lib/rails_autodoc/route_inspector.rb"
+
+Metrics/AbcSize:
+  Exclude:
+    - "lib/rails_autodoc/openapi_spec_builder.rb"
+    - "lib/rails_autodoc/strong_params_parser.rb"
+    - "lib/rails_autodoc/route_inspector.rb"
+
+Metrics/CyclomaticComplexity:
+  Max: 14
+  Exclude:
+    - "lib/rails_autodoc/openapi_spec_builder.rb"
+    - "lib/rails_autodoc/response_inferencer.rb"
+    - "lib/rails_autodoc/strong_params_parser.rb"
+
+Metrics/PerceivedComplexity:
+  Max: 18
+
+Style/ClassVars:
+  Exclude:
+    - "app/controllers/rails_autodoc/spec_controller.rb"

@@ -1,0 +1,26 @@
+# frozen_string_literal: true
+
+appraise "rails-5-2" do
+  gem "rails", "~> 5.2.8"
+  gem "sqlite3", "~> 1.4.4"
+end
+
+appraise "rails-6-1" do
+  gem "rails", "~> 6.1.7"
+  gem "sqlite3", "~> 1.4.4"
+end
+
+appraise "rails-7-0" do
+  gem "rails", "~> 7.0.8"
+  gem "sqlite3", "~> 1.6.9"
+end
+
+appraise "rails-7-1" do
+  gem "rails", "~> 7.1.5"
+  gem "sqlite3", "~> 1.6.9"
+end
+
+appraise "rails-8-0" do
+  gem "rails", "~> 8.0.0"
+  gem "sqlite3", ">= 2.1"
+end
