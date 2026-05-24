@@ -156,7 +156,7 @@ GEM
     net-smtp (0.5.1)
       net-protocol
     nio4r (2.7.5)
-    nokogiri (1.15.7)
+    nokogiri (1.19.3)
       mini_portile2 (~> 2.8.2)
       racc (~> 1.4)
     parallel (1.28.0)
@@ -285,6 +285,7 @@ PLATFORMS
 DEPENDENCIES
   appraisal
   combustion (~> 1.4)
+  nokogiri (>= 1.16.8)
   rails (~> 7.1)
   rails-autodoc!
   rspec (~> 3.12)
@@ -294,4 +295,4 @@ DEPENDENCIES
   webmock
 
 BUNDLED WITH
-   2.1.4
+   2.6.9

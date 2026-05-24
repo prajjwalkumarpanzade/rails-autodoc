@@ -17,6 +17,7 @@ jobs:
         with:
           ruby-version: ${{ matrix.ruby }}
           bundler-cache: true
+          bundler: "2.6.9"
       - name: Run RuboCop
         run: bundle exec rubocop
       - name: Run specs
@@ -32,6 +33,7 @@ jobs:
         with:
           ruby-version: "3.2"
           bundler-cache: true
+          bundler: "2.6.9"
       - name: Install appraisal gemfiles
         run: bundle exec appraisal install
       - name: Run appraisal specs
