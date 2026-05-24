@@ -285,7 +285,6 @@ PLATFORMS
 DEPENDENCIES
   appraisal
   combustion (~> 1.4)
-  nokogiri (>= 1.16.8)
   rails (~> 7.1)
   rails-autodoc!
   rspec (~> 3.12)
