@@ -18,7 +18,7 @@ Gem::Specification.new do |spec|
 
   spec.summary = "Auto-generate OpenAPI documentation from Rails routes, strong params, and schemas"
   spec.description = "Generate and serve OpenAPI 3.0 specs from Rails conventions with optional annotation overrides."
-  spec.homepage = "https://github.com/example/rails-autodoc"
+  spec.homepage = "https://github.com/prajjwalkumarpanzade/rails-autodoc"
   spec.license = "MIT"
   spec.required_ruby_version = ">= 2.7.0"
 
