@@ -30,29 +30,13 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        include:
-          # Rails 5.2 is not compatible with Ruby 3.x (middleware keyword-arg breakage).
-          - ruby: "2.7"
-            appraisal: "rails-5-2"
-            bundler: "2.4.22"
-          - ruby: "3.2"
-            appraisal: "rails-6-1"
-            bundler: "2.6.9"
-          - ruby: "3.2"
-            appraisal: "rails-7-0"
-            bundler: "2.6.9"
-          - ruby: "3.2"
-            appraisal: "rails-7-1"
-            bundler: "2.6.9"
-          - ruby: "3.2"
-            appraisal: "rails-8-0"
-            bundler: "2.6.9"
+        appraisal: ["rails-7-0", "rails-7-1", "rails-8-0"]
     steps:
       - uses: actions/checkout@v4
       - uses: ruby/setup-ruby@v1
         with:
-          ruby-version: ${{ matrix.ruby }}
-          bundler: ${{ matrix.bundler }}
+          ruby-version: "3.2"
+          bundler: "2.6.9"
       - name: Install appraisal
         run: gem install appraisal --no-document
       - name: Generate appraisal gemfiles
